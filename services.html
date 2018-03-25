@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script type="text/javascript">
+	function isSiteOnline(url,callback) {
+		var timer = setTimeout(function(){ callback(false); },5000)
+		var img = document.createElement("img");
+		img.onload = function() {
+			clearTimeout(timer);
+			callback(true);
+		}
+		img.onerror = function() {
+			clearTimeout(timer);
+			callback(false);
+		}
+		img.src = url+"/favicon.ico";
+	}
+	function Check(site, id)
+	{
+		var data = "<span id=\"" + id + "\" style=\"color:gray;\">" + id + "</span><br>";
+		document.getElementById("content").innerHTML+= data;
+		isSiteOnline(site,function(found){
+			var z = document.getElementById(id);
+			if(found) {
+				z.style.color = "LightGreen ";
+			}
+			else {
+				z.style.color = "red";
+			}
+		});
+	}
+	window.onload = function()
+	{
+		Check("http://google.com", "Google");
+		Check("http://ya.ru", "Yandex");
+		Check("http://login.skype.com", "Skype");
+		Check("http://jira.nsk.movavi.com", "Jira");
+		Check("http://stash.movavi.srv", "Stash");
+		Check("http://jenkins.movavi.srv", "Jenkins");
+	}
+</script>
+</head>
+<body bgcolor="black">
+	<div id="content"></div>
+</body>
+</html>
+</html>
