@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Как настроить PyTorch для Windows 10</title>
+</head>
+<body>
+<p>
+<h1>Настройка и проверка PyTorch для win10</h1>
+Качаем и ставим анаконду 3.6:<br>
+<a href="https://www.anaconda.com/download/#windows">https://www.anaconda.com/download/#windows</a>
+</p>
+
+<p>
+Переменной anaconda3_path не существует, но представим что это так<br>
+Запускаем командную строку (Anaconda Prompt) с нужными переменными<br>
+<font face="Courier New">> %windir%\System32\cmd.exe "/K" %anaconda3_path%\Scripts\activate.bat %anaconda3_path%</font><br>
+P.S. Anaconda Prompt можно найти и в пуске, но не понт
+</p>
+
+<p>
+Ставим в этой консоли Pytorch (инструкция есть прям на главной <a href="http://pytorch.org/">http://pytorch.org/</a>, чтобы для своего железа скачать то, что надо)<br>
+<font face="Courier New">> conda install pytorch -c pytorch</font><br>
+<font face="Courier New">> pip3 install torchvision</font>
+</p>
+
+<p>
+Качаем <a href="https://github.com/mrfeod/examples/blob/mnist/mnist/main.py">https://github.com/mrfeod/examples/blob/mnist/mnist/main.py</a><br>
+Код тренировщика пофикшен со сраного линукса для православной винды<br>
+
+<p>
+Запускаем обучение<br>
+<font face="Courier New">> python main.py</font>
+</p>
+
+<p>Ждем несколько минут пока пройдет 10 эпох и если все удалось - PyTorch настроен, можно гонять <s>лысого</s> нейронки</p>
+</body>
+</html>
+</html>
