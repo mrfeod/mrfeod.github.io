@@ -6,7 +6,7 @@ Experienced C++ Lead/Senior Software Engineer with 10+ years of work experience.
 
 ### **Contact Information**
 - **E-mail:** antsosnin@yandex.ru
-- **LinkedIn:** https://www.linkedin.com/in/antosnin
+- **LinkedIn:** https://www.linkedin.com/in/antsosnin/
 - **Telegram:** https://antonso.t.me
 - **Location:** Cyprus
 
